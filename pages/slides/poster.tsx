@@ -11,6 +11,7 @@ pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/$
 const renderThumb = ({ style, ...props }) => {
   const thumbStyle = {
     backgroundColor: `rgb(255, 255, 255)`,
+    maxHeight: "44px",
   };
   return <div style={{ ...style, ...thumbStyle }} {...props} />;
 };
