@@ -1,7 +1,9 @@
 .stim-table-wrapper {
   // background: #ececec;
+
+  // padding: 10px;
   // total horizontal width is 500px, so this will leave 480px for content
-  padding: 10px;
+  padding: 0px 10px 10px 10px;
 }
 // resets for card cells
 .stim-table-wrapper .ant-card {
@@ -11,8 +13,10 @@
 
 // make the most of our tiny 100px area..
 .ant-card.stim-image-col img {
-  height: 100px;
-  width: 100px;
+  //   height: 100px;
+  //   width: 100px;
+  height: 200px;
+  width: 200px;
 }
 
 .ant-card.stim-image-col .ant-card-body {
@@ -44,7 +48,16 @@
   line-height: 2em;
   font-size: 1.2em;
   text-align: center;
-  border-bottom: 1px solid $brand_cu_flatter_blue;
+  // border-bottom: 2px solid $brand_cu_flatter_blue;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-image: linear-gradient(
+      to left,
+      transparent,
+      $brand_cu_flatter_blue,
+      transparent
+    )
+    33;
 }
 .stim-group-pct-label,
 h4.stim-group-pct-label {
@@ -55,20 +68,26 @@ h4.stim-group-pct-label {
 .stim-labels-row {
   // max-height: 50px;
 
+  &.half-spacer-row .ant-card-body {
+    max-height: 24px;
+    padding: 12px;
+  }
+
   .ant-col {
     margin-top: 10px;
     margin-bottom: 10px;
 
-    :not(:last-child) {
+    &:not(:last-child) {
       // border-right: 2px solid #2d2d2d;
       border-right-width: 2px;
       border-right-style: solid;
       border-image: linear-gradient(
           to top,
-          $brand-dark-blue,
-          $brand_cu_blue_darker
+          transparent,
+          $brand-spicy-mustard,
+          transparent
         )
-        1 100%;
+        10%;
     }
   }
 
@@ -80,12 +99,20 @@ h4.stim-group-pct-label {
 
     .stim-group-pct-label {
       margin-bottom: unset;
-      font-size: 1.1em;
+      font-size: 1em;
     }
   }
 }
-/*
+
 .stim-group-label {
-  font-size: 1.1em;
+  // font-size: 1.1em;
+  background: $brand_cu_flatter_blue;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    transparent 20%,
+    darken($brand_cu_flatter_blue, 10%) 50%,
+    transparent 80%,
+    transparent 100%
+  );
 }
-*/

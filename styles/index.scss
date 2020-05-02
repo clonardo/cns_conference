@@ -1,7 +1,11 @@
 @import "./brand-vars/index.scss";
 @import "./stimuli-table.scss";
+html {
+  height: 100%;
+}
 
 body {
+  margin: 0;
   background: $brand-blue;
 
   //https://cssgradient.io/
@@ -11,6 +15,13 @@ body {
     $brand_cu_blue_darker 79%,
     $brand-black 97%
   );
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.wider-page-header {
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 .site-layout-content {
   max-width: 500px;
@@ -46,4 +57,22 @@ body {
   background: rgba(255, 255, 255, 0.2);
   margin: 16px 24px 16px 0;
   float: left;
+}
+
+// higher-contrast horizontal separator
+.h-separator {
+  margin-top: 20px;
+  margin-left: 30px;
+  margin-bottom: -25px;
+  margin-right: 30px;
+  // border-top: 2px solid $brand-spicy-mustard;
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-image: linear-gradient(
+      to left,
+      transparent,
+      $brand-spicy-mustard,
+      transparent
+    )
+    33;
 }

@@ -21,7 +21,8 @@ export const ImageStimulusTable: React.FC<IImageStimulusTableProps> = (
   return (
     <div className="stim-table-wrapper">
       <ImageRow {...props.gridContents.hRow} direction={"Horizontal"} />
-      <SpacerRow />
+      {/* <SpacerRow /> */}
+      <br />
       <ImageRow {...props.gridContents.vRow} direction={"Vertical"} />
     </div>
   );

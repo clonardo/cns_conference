@@ -6,11 +6,11 @@ import { makeStimUrls } from "../../utils";
  * Options for display grid
  */
 const STIM_DISPLAY_CONFIG = {
-  grid: makeStimUrls("color"),
-  pageDisplayTitle: "Color Stimuli",
+  grid: makeStimUrls("gabor"),
+  pageDisplayTitle: "Gabor Stimuli",
 };
 
-// http://localhost:3000/slides/color-stimuli
+// http://localhost:3000/slides/gabor-stimuli
 const StimPage = () => (
   <Layout
     title={STIM_DISPLAY_CONFIG.pageDisplayTitle}

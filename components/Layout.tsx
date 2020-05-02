@@ -10,11 +10,17 @@ type Props = {
    * Optional slide header
    */
   slideHeader?: string;
+
+  /**
+   * Optional extra class to apply to PageHeader
+   */
+  extraHeaderClass?: string;
 };
 
 const Layout: React.FunctionComponent<Props> = ({
   children,
   slideHeader,
+  extraHeaderClass,
   title = "Slide",
 }) => (
   <div className="site-layout-content">
@@ -23,7 +29,13 @@ const Layout: React.FunctionComponent<Props> = ({
       <meta charSet="utf-8" />
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     </Head>
-    {slideHeader && <PageHeader title={slideHeader} backIcon={false} />}
+    {slideHeader && (
+      <PageHeader
+        title={slideHeader}
+        className={extraHeaderClass}
+        backIcon={false}
+      />
+    )}
     {/* <header>
       <nav>
         <Link href="/">

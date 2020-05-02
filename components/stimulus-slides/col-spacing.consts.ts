@@ -4,5 +4,5 @@
 export const COL_SPACING = {
   gutter: 4,
   startCol: 4,
-  imageCol: 6,
+  imageCol: 12,
 };
