@@ -1,0 +1,49 @@
+@import "./brand-vars/index.scss";
+@import "./stimuli-table.scss";
+
+body {
+  background: $brand-blue;
+
+  //https://cssgradient.io/
+  background: linear-gradient(
+    225deg,
+    $brand-cu_blue 9%,
+    $brand_cu_blue_darker 79%,
+    $brand-black 97%
+  );
+}
+.site-layout-content {
+  max-width: 500px;
+  width: 500px;
+  // background-color: $brand_cu_blue;
+  /*
+  background: $brand-blue;
+
+  //https://cssgradient.io/
+  background: linear-gradient(
+    225deg,
+    $brand-cu_blue 9%,
+    $brand_cu_blue_darker 79%,
+    $brand-black 97%
+  );
+  */
+  margin-right: auto;
+  margin-left: auto;
+  overflow-x: hidden;
+  color: $brand-off-white;
+  //   background: #fff;
+  //   padding: 24px;
+  //   min-height: 280px;
+}
+
+// make header off-white as well
+.site-layout-content .ant-page-header-heading-title {
+  color: $brand-off-white;
+}
+#components-layout-demo-top .logo {
+  width: 120px;
+  height: 31px;
+  background: rgba(255, 255, 255, 0.2);
+  margin: 16px 24px 16px 0;
+  float: left;
+}

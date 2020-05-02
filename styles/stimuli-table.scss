@@ -1,0 +1,91 @@
+.stim-table-wrapper {
+  // background: #ececec;
+  // total horizontal width is 500px, so this will leave 480px for content
+  padding: 10px;
+}
+// resets for card cells
+.stim-table-wrapper .ant-card {
+  background-color: unset;
+  color: $brand-off-white;
+}
+
+// make the most of our tiny 100px area..
+.ant-card.stim-image-col img {
+  height: 100px;
+  width: 100px;
+}
+
+.ant-card.stim-image-col .ant-card-body {
+  padding: 0;
+}
+
+[data-theme="dark"] .stim-table-wrapper {
+  background: #303030;
+}
+
+// stimulus image column
+.stim-image-col {
+  text-align: center;
+}
+
+.stim-image-row-container {
+  // padding-top: 10px;
+  padding-top: 0;
+  padding-bottom: 10px;
+  background-color: darken($brand_cu_blue_darker, 2.5%);
+  // https://neumorphism.io/#09304F
+  box-shadow: 2px 2px 4px #082943, -2px -2px 4px #0a375b;
+}
+.stim-group-label h4.ant-typography {
+  color: $brand-off-white;
+}
+.stim-group-label h4.ant-typography {
+  // margin-left: 10px;
+  line-height: 2em;
+  font-size: 1.2em;
+  text-align: center;
+  border-bottom: 1px solid $brand_cu_flatter_blue;
+}
+.stim-group-pct-label,
+h4.stim-group-pct-label {
+  text-align: center;
+  color: $brand-off-white;
+}
+
+.stim-labels-row {
+  // max-height: 50px;
+
+  .ant-col {
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    :not(:last-child) {
+      // border-right: 2px solid #2d2d2d;
+      border-right-width: 2px;
+      border-right-style: solid;
+      border-image: linear-gradient(
+          to top,
+          $brand-dark-blue,
+          $brand_cu_blue_darker
+        )
+        1 100%;
+    }
+  }
+
+  .ant-card-body {
+    max-height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .stim-group-pct-label {
+      margin-bottom: unset;
+      font-size: 1.1em;
+    }
+  }
+}
+/*
+.stim-group-label {
+  font-size: 1.1em;
+}
+*/
