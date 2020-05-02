@@ -91,9 +91,13 @@ body {
   background-color: #fefefe;
   display: flex;
   flex-grow: 1;
+  padding-top: 10px;
+  padding-bottom: 10px;
 
   &:last-child {
-    padding: 5px;
+    // padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
     font-size: 1.05em;
   }
 }
@@ -109,6 +113,7 @@ body {
 }
 div.icon-wrapper {
   min-width: 30px;
+  max-width: 30px;
   justify-content: center;
 }
 
