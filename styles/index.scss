@@ -29,6 +29,11 @@ body {
     padding-right: 5px;
   }
 }
+
+// allow wrapping
+.ant-page-header.withWrap span.ant-page-header-heading-title {
+  white-space: normal;
+}
 .site-layout-content {
   max-width: 500px;
   width: 500px;
