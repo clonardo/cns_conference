@@ -16,6 +16,10 @@ const renderThumb = ({ style, ...props }) => {
   return <div style={{ ...style, ...thumbStyle }} {...props} />;
 };
 
+const PDF_LINK = `https://vconf_materials.s3.amazonaws.com/boothmaterials/DRAFT2CNSPOSTER20201_2ozu4xexbv.pdf`;
+
+//old: href="https://vconf_materials.s3.amazonaws.com/boothmaterials/DRAFT1CNSPOSTER20202_grjhb63os5.pdf"
+
 /**
  * Options for bulleted list
  */
@@ -24,7 +28,8 @@ const DISPLAY_CONFIG = {
     <span>
       Please view our poster below, or&nbsp;
       <a
-        href="https://vconf_materials.s3.amazonaws.com/boothmaterials/DRAFT1CNSPOSTER20202_grjhb63os5.pdf"
+        // href="https://vconf_materials.s3.amazonaws.com/boothmaterials/DRAFT1CNSPOSTER20202_grjhb63os5.pdf"
+        href={PDF_LINK}
         target="_blank"
       >
         click here to open it in a new window.&nbsp;
@@ -78,7 +83,7 @@ const PoTaskPage: React.FC = () => {
       />
       <Document
         file={{
-          url: `https://vconf_materials.s3.amazonaws.com/boothmaterials/DRAFT1CNSPOSTER20202_grjhb63os5.pdf`,
+          url: PDF_LINK,
         }}
         onLoadSuccess={(res: { numPages: number }) => {
           console.log("got onLoadSuccess : ", res);
